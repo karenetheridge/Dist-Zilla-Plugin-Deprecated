@@ -6,22 +6,29 @@ package Dist::Zilla::Plugin::Deprecated;
 # vim: set ts=8 sw=4 tw=78 et :
 
 use Moose;
-with 'Dist::Zilla::Role::...';
+with 'Dist::Zilla::Role::MetaProvider';
 
 use namespace::autoclean;
 
-around dump_config => sub
+# no configs yet to dump
+#around dump_config => sub
+#{
+#    my ($orig, $self) = @_;
+#    my $config = $self->$orig;
+#
+#    $config->{+__PACKAGE__} = {
+#        ...
+#    };
+#
+#    return $config;
+#};
+
+sub metadata
 {
-    my ($orig, $self) = @_;
-    my $config = $self->$orig;
+    my $self = shift;
 
-    $config->{+__PACKAGE__} = {
-        ...
-    };
-
-    return $config;
-};
-
+    return { x_deprecated => 1 };
+}
 
 __PACKAGE__->meta->make_immutable;
 __END__
@@ -36,13 +43,7 @@ In your F<dist.ini>:
 
 =head1 DESCRIPTION
 
-This is a L<Dist::Zilla> plugin that...
-
-=head1 CONFIGURATION OPTIONS
-
-=head2 C<foo>
-
-...
+This is a L<Dist::Zilla> plugin that adds metadata to your distribution marking it as deprecated.
 
 =head1 SUPPORT
 
@@ -54,11 +55,6 @@ I am also usually active on irc, as 'ether' at C<irc.perl.org>.
 
 =head1 ACKNOWLEDGEMENTS
 
-...
-
-=head1 SEE ALSO
-
-=for :list
-* L<foo>
+Neil Bowers requested this. :)
 
 =cut

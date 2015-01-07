@@ -15,7 +15,7 @@ my $tzil = Builder->from_config(
             path(qw(source dist.ini)) => simple_ini(
                 [ GatherDir => ],
                 [ MetaConfig => ],
-                [ 'Deprecated' => ... ],
+                [ 'Deprecated' => ],
             ),
             path(qw(source lib Foo.pm)) => "package Foo;\n1;\n",
         },
@@ -32,20 +32,7 @@ is(
 cmp_deeply(
     $tzil->distmeta,
     superhashof({
-        x_Dist_Zilla => superhashof({
-            plugins => supersetof(
-                {
-                    class => 'Dist::Zilla::Plugin::Deprecated',
-                    config => {
-                        'Dist::Zilla::Plugin::Deprecated' => {
-                            ...
-                        },
-                    },
-                    name => 'Deprecated',
-                    version => ignore,
-                },
-            ),
-        }),
+        x_deprecated => 1,
     }),
     'plugin metadata, including dumped configs',
 ) or diag 'got distmeta: ', explain $tzil->distmeta;
