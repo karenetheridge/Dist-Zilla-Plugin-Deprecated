@@ -2,6 +2,8 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.002     2015-01-07 23:26:28Z
+
           - Added abstract.
           - Added more info to DESCRIPTION.
 

@@ -4,11 +4,11 @@
 
 =head1 NAME
 
-Dist::Zilla::Plugin::Deprecated - ...
+Dist::Zilla::Plugin::Deprecated - add metadata to your distribution marking it as deprecated
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
@@ -19,6 +19,11 @@ In your F<dist.ini>:
 =head1 DESCRIPTION
 
 This is a L<Dist::Zilla> plugin that adds metadata to your distribution marking it as deprecated.
+
+This use the unofficial C<x_deprecated> field,
+which is a new convention for marking a CPAN distribution as deprecated.
+You should still note that the distribution is deprecated in the documentation,
+for example in the abstract and the first paragraph of the DESCRIPTION section.
 
 =for Pod::Coverage metadata
 
@@ -44,5 +49,11 @@ This software is copyright (c) 2015 by Karen Etheridge.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
+
+=head1 CONTRIBUTOR
+
+=for stopwords Neil Bowers
+
+Neil Bowers <neil@bowers.com>
 
 =cut
