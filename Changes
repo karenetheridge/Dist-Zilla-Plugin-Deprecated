@@ -2,5 +2,7 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+          - Added abstract.
+
 0.001     2015-01-07 22:53:06Z
           - Initial release.
