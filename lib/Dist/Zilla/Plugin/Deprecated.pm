@@ -45,6 +45,8 @@ In your F<dist.ini>:
 
 This is a L<Dist::Zilla> plugin that adds metadata to your distribution marking it as deprecated.
 
+=for Pod::Coverage metadata
+
 =head1 SUPPORT
 
 =for stopwords irc
