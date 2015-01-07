@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 package Dist::Zilla::Plugin::Deprecated;
-# ABSTRACT: added metadata to your distribution marking it as deprecated
+# ABSTRACT: add metadata to your distribution marking it as deprecated
 # KEYWORDS: ...
 # vim: set ts=8 sw=4 tw=78 et :
 
