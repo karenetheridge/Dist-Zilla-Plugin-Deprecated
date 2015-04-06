@@ -33,6 +33,19 @@ cmp_deeply(
     $tzil->distmeta,
     superhashof({
         x_deprecated => 1,
+        x_Dist_Zilla => superhashof({
+            plugins => supersetof({
+                class => 'Dist::Zilla::Plugin::Deprecated',
+                config => {
+                    'Dist::Zilla::Plugin::Deprecated' => {
+                        all => 1,
+                        modules => [],
+                    },
+                },
+                name => 'Deprecated',
+                version => Dist::Zilla::Plugin::Deprecated->VERSION,
+            }),
+        }),
     }),
     'plugin metadata, including dumped configs',
 ) or diag 'got distmeta: ', explain $tzil->distmeta;

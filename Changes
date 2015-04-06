@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          - new "modules" option, to allow deprecating specific modules rather
+            than the entire distribution
 
 0.002     2015-01-07 23:26:28Z
           - Added abstract.
