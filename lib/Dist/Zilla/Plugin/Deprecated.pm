@@ -47,7 +47,7 @@ In your F<dist.ini>:
 
 This is a L<Dist::Zilla> plugin that adds metadata to your distribution marking it as deprecated.
 
-This use the unofficial C<x_deprecated> field,
+This uses the unofficial C<x_deprecated> field,
 which is a new convention for marking a CPAN distribution as deprecated.
 You should still note that the distribution is deprecated in the documentation,
 for example in the abstract and the first paragraph of the DESCRIPTION section.
