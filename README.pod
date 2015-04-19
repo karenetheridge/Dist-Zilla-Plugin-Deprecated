@@ -8,7 +8,7 @@ Dist::Zilla::Plugin::Deprecated - add metadata to your distribution marking it a
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
@@ -16,16 +16,36 @@ In your F<dist.ini>:
 
     [Deprecated]
 
+or
+
+    [Deprecated]
+    module = MyApp::OlderAPI
+
 =head1 DESCRIPTION
 
 This is a L<Dist::Zilla> plugin that adds metadata to your distribution marking it as deprecated.
 
-This use the unofficial C<x_deprecated> field,
+This uses the unofficial C<x_deprecated> field,
 which is a new convention for marking a CPAN distribution as deprecated.
 You should still note that the distribution is deprecated in the documentation,
 for example in the abstract and the first paragraph of the DESCRIPTION section.
 
-=for Pod::Coverage metadata
+You can also mark a single module (or subset of modules) as deprecated by
+listing them with the C<module> option.  This will add an C<x_deprecated>
+field to the C<provides> section of metadata.
+
+=head1 CONFIGURATION OPTIONS
+
+=head2 C<module>
+
+Identify a specific module to be deprecated. Can be used more than once.
+
+=head2 C<all>
+
+Not normally needed directly. Mark an entire distribution as deprecated. This
+defaults to true when there are no C<module>s listed, and false otherwise.
+
+=for Pod::Coverage metadata mvp_aliases mvp_multivalue_args
 
 =head1 SUPPORT
 

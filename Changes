@@ -1,6 +1,6 @@
 Revision history for Dist-Zilla-Plugin-Deprecated
 
-{{$NEXT}}
+0.003     2015-04-19 07:34:15Z
           - new "modules" option, to allow deprecating specific modules rather
             than the entire distribution
 
