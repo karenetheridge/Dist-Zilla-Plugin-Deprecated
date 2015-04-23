@@ -8,7 +8,7 @@ Dist::Zilla::Plugin::Deprecated - add metadata to your distribution marking it a
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 
