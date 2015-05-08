@@ -9,6 +9,10 @@ use Test::Fatal;
 use Path::Tiny;
 use CPAN::Meta::Validator;
 
+# newer CPAN::Meta::Merge, or older Dist::Zilla (which used
+# Hash::Merge::Simple instead), is required for the 'modules' feature, due to
+# how CPAN::Meta::Merge handled 'provides' data before 2.150002
+
 # a plain "use if eval ..." behaves badly, because eval returns an empty list
 # in list context on a die.
 use if !!eval 'require Dist::Zilla; Dist::Zilla->VERSION("5.022"); 1',
