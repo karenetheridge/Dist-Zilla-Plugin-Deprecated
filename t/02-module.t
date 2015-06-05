@@ -29,10 +29,11 @@ use lib 't/lib';
                     [ GatherDir => ],
                     [ '=SimpleProvides' ],
                     [ MetaConfig => ],
-                    [ 'Deprecated' => { module => 'Foo::Bar' } ],
+                    [ 'Deprecated' => { module => [ 'Foo::Bar', 'Foo::Baz' ] } ],
                 ),
                 path(qw(source lib Foo.pm)) => "package Foo;\n1;\n",
                 path(qw(source lib Foo Bar.pm)) => "package Foo::Bar;\n1;\n",
+                path(qw(source lib Foo Baz.pm)) => "package Foo::Baz;\n1;\n",
             },
         },
     );
@@ -66,6 +67,11 @@ use lib 't/lib';
                         version => '0.001',
                         x_deprecated => 1,
                     },
+                    'Foo::Baz' => {
+                        file => 'lib/Foo/Baz.pm',
+                        version => '0.001',
+                        x_deprecated => 1,
+                    },
                 },
                 x_Dist_Zilla => superhashof({
                     plugins => supersetof({
@@ -73,7 +79,7 @@ use lib 't/lib';
                         config => {
                             'Dist::Zilla::Plugin::Deprecated' => {
                                 all => 0,
-                                modules => [ 'Foo::Bar' ],
+                                modules => [ 'Foo::Bar', 'Foo::Baz' ],
                             },
                         },
                         name => 'Deprecated',

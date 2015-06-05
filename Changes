@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-Plugin-Deprecated
 
 {{$NEXT}}
+          - sort the list of deprecated modules, for repeatable dumped configs
 
 0.004     2015-04-23 16:26:38Z
           - fix test that behaves badly due to poor evaluation of "use if eval

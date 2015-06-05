@@ -38,8 +38,8 @@ around dump_config => sub
     my $config = $self->$orig;
 
     $config->{+__PACKAGE__} = {
-        all => $self->all,
-        modules => [ $self->modules ],
+        all => ( $self->all ? 1 : 0),
+        modules => [ sort $self->modules ],
     };
 
     return $config;
