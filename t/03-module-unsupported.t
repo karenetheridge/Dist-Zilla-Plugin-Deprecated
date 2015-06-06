@@ -4,10 +4,8 @@ use warnings;
 use Test::More;
 use if $ENV{AUTHOR_TESTING}, 'Test::Warnings';
 use Test::DZil;
-use Test::Deep;
 use Test::Fatal;
 use Path::Tiny;
-use CPAN::Meta::Validator;
 
 use Test::Requires { 'Dist::Zilla' => '5.022' };
 plan skip_all => 'CPAN::Meta::Merge earlier than 2.150002 required for these tests'
