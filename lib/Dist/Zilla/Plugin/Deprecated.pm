@@ -40,6 +40,7 @@ around dump_config => sub
     $config->{+__PACKAGE__} = {
         all => ( $self->all ? 1 : 0),
         modules => [ sort $self->modules ],
+        blessed($self) ne __PACKAGE__ ? ( version => $VERSION ) : (),
     };
 
     return $config;
