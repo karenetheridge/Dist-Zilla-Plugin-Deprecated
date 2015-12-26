@@ -94,9 +94,15 @@ field to the C<provides> section of metadata.
 
 =head2 C<module>
 
+    [Deprecated]
+    module = MyApp::OlderAPI
+
 Identify a specific module to be deprecated. Can be used more than once.
 
 =head2 C<all>
+
+    [Deprecated]
+    all = 1
 
 Not normally needed directly. Mark an entire distribution as deprecated. This
 defaults to true when there are no C<module>s listed, and false otherwise.
@@ -105,6 +111,7 @@ defaults to true when there are no C<module>s listed, and false otherwise.
 
 =head1 ACKNOWLEDGEMENTS
 
-Neil Bowers requested this. :)
+Neil Bowers requested this. :)  And then he
+L<blogged about it|http://neilb.org/2015/01/17/deprecated-metadata.html>.
 
 =cut
