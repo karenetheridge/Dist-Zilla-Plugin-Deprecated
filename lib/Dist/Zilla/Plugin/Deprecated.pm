@@ -5,7 +5,7 @@ package Dist::Zilla::Plugin::Deprecated;
 # KEYWORDS: plugin metadata module distribution deprecated
 # vim: set ts=8 sts=4 sw=4 tw=115 et :
 
-our $VERSION = '0.005';
+our $VERSION = '0.006';
 
 use Moose;
 with 'Dist::Zilla::Role::MetaProvider';

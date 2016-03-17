@@ -1,5 +1,7 @@
 Revision history for Dist-Zilla-Plugin-Deprecated
 
+{{$NEXT}}
+
 0.005     2016-03-17 03:42:22Z
           - sort the list of deprecated modules, for repeatable dumped configs
           - update documentation regarding the necessity of a
