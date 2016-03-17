@@ -88,7 +88,9 @@ for example in the abstract and the first paragraph of the DESCRIPTION section.
 
 You can also mark a single module (or subset of modules) as deprecated by
 listing them with the C<module> option.  This will add an C<x_deprecated>
-field to the C<provides> section of metadata.
+field to the C<provides> section of metadata.  Note that L<CPAN::Meta::Spec>
+requires you need to populate the rest of C<provides> metadata through some
+other means, such as L<Dist::Zilla::Plugin::MetaProvides::Package>.
 
 =head1 CONFIGURATION OPTIONS
 
