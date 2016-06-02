@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 package Dist::Zilla::Plugin::Deprecated;
-# ABSTRACT: add metadata to your distribution marking it as deprecated
+# ABSTRACT: Add metadata to your distribution marking it as deprecated
 # KEYWORDS: plugin metadata module distribution deprecated
 # vim: set ts=8 sts=4 sw=4 tw=115 et :
 
