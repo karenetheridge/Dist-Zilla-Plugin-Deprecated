@@ -7,7 +7,7 @@ use Test::DZil;
 use Test::Fatal;
 use Path::Tiny;
 
-use Test::Requires { 'Dist::Zilla' => '5.022' };
+use Test::Needs { 'Dist::Zilla' => '5.022' };
 plan skip_all => 'CPAN::Meta::Merge earlier than 2.150002 required for these tests'
     if eval 'require CPAN::Meta::Merge; CPAN::Meta::Merge->VERSION("2.150002"); 1';
 
