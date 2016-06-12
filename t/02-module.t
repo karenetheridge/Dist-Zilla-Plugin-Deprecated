@@ -130,7 +130,7 @@ use lib 't/lib';
                 },
             },
         }),
-        'plugin metadata, including dumped configs',
+        'plugin metadata (broken - [MetaJSON] will never write this out)',
     ) or diag 'got distmeta: ', explain $tzil->distmeta;
 
     diag 'got log messages: ', explain $tzil->log_messages
