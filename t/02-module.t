@@ -15,7 +15,7 @@ use CPAN::Meta::Validator;
 
 # a plain "use if eval ..." behaves badly, because eval returns an empty list
 # in list context on a die.
-use if !!eval 'require Dist::Zilla; Dist::Zilla->VERSION("5.022"); 1',
+use if !!eval { require Dist::Zilla; Dist::Zilla->VERSION('5.022') },
     'Test::Needs' => { 'CPAN::Meta::Merge' => '2.150002' };
 
 use lib 't/lib';

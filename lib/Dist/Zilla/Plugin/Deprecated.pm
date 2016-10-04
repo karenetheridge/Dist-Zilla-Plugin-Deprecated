@@ -56,7 +56,7 @@ sub metadata
     # of merge we need as in new CPAN::Meta::Merge
     $self->log_fatal('CPAN::Meta::Merge 2.150002 required to deprecate an individual module!')
         if eval { Dist::Zilla->VERSION('5.022') }
-            and not eval 'require CPAN::Meta::Merge; CPAN::Meta::Merge->VERSION("2.150002"); 1';
+            and not eval { require CPAN::Meta::Merge; CPAN::Meta::Merge->VERSION('2.150002') };
 
     return { provides => { map { $_ => { x_deprecated => 1 } } $self->modules } };
 }
