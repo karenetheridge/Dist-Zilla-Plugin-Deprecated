@@ -1,5 +1,7 @@
 Revision history for Dist-Zilla-Plugin-Deprecated
 
+{{$NEXT}}
+
 0.007     2016-11-13 07:12:24Z
           - document some recommended practices when using this plugin
 

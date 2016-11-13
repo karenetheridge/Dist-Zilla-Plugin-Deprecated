@@ -5,7 +5,7 @@ package Dist::Zilla::Plugin::Deprecated;
 # ABSTRACT: Add metadata to your distribution marking it as deprecated
 # KEYWORDS: plugin metadata module distribution deprecated
 
-our $VERSION = '0.007';
+our $VERSION = '0.008';
 
 use Moose;
 with 'Dist::Zilla::Role::MetaProvider';
