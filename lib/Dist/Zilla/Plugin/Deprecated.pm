@@ -92,6 +92,25 @@ field to the C<provides> section of metadata.  Note that L<CPAN::Meta::Spec>
 requires you to populate the rest of C<provides> metadata through some
 other means, such as L<Dist::Zilla::Plugin::MetaProvides::Package>.
 
+=head2 Recommendations
+
+=for stopwords metacpan.org
+
+=over 4
+
+=item *
+
+When you mark a module as deprecated, prepend '(DEPRECATED)' to its abstract (the one-line module description used
+in the C<NAME> pod section, which is used to populate module lists on sites such as metacpan.org).
+
+=item *
+
+Add a warning in the code (usually in the main body of the module, outside of any subroutine):
+
+    warnings::warnif('deprecated', 'My::Module is deprecated and should no longer be used');
+
+=back
+
 =head1 CONFIGURATION OPTIONS
 
 =head2 C<module>
