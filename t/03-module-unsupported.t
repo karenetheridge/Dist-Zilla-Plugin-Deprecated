@@ -9,7 +9,7 @@ use Path::Tiny;
 
 use Test::Needs { 'Dist::Zilla' => '5.022' };
 plan skip_all => 'CPAN::Meta::Merge earlier than 2.150002 required for these tests'
-    if eval { require CPAN::Meta::Merge; CPAN::Meta::Merge->VERSION('2.150002') };
+    if eval { +require CPAN::Meta::Merge; CPAN::Meta::Merge->VERSION('2.150002') };
 
 my $tzil = Builder->from_config(
     { dist_root => 'does-not-exist' },
