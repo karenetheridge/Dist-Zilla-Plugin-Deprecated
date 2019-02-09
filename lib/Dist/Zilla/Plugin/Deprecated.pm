@@ -58,7 +58,7 @@ sub metadata
         if eval { Dist::Zilla->VERSION('5.022') }
             and not eval { +require CPAN::Meta::Merge; CPAN::Meta::Merge->VERSION('2.150002') };
 
-    return { provides => { map { $_ => { x_deprecated => 1 } } $self->modules } };
+    return { provides => { map +($_ => { x_deprecated => 1 }), $self->modules } };
 }
 
 __PACKAGE__->meta->make_immutable;

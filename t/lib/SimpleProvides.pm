@@ -20,7 +20,7 @@ sub metadata
                 $package =~ s/^lib:://;
                 $package =~ s/\.pm$//;
                 $package => +{ file => $filename, version => $version }
-            } grep { $_->name =~ /^lib\/.*\.pm$/} @{ $self->zilla->files }
+            } grep $_->name =~ /^lib\/.*\.pm$/, @{ $self->zilla->files }
         }
     };
 }
